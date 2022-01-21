@@ -22,7 +22,7 @@ mkdir -p downloads
 wget -N -P downloads "$archive_url"
 
 # Unpack
-7z e "downloads/${archive_url##*/}" -r app.asar -o"$tmp"
+cp BluOS Controller 3.16.1 "$tmp"/app.asar 
 npm add --save-dev npx
 npx asar extract "$tmp/app.asar" "$tmp/app"
 
